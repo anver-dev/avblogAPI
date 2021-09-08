@@ -1,4 +1,4 @@
-package com.anver.demo;
+package com.triapp;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

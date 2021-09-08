@@ -1,4 +1,4 @@
-package com.anver.demo;
+package com.triapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
