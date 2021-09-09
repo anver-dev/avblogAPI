@@ -1,7 +1,7 @@
 package com.triapp.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -23,11 +23,12 @@ public class Division {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long idDivision;
 	private String nombre;
+	private String abreviacion;
 	
 	@OneToMany(targetEntity = Carrera.class, fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, orphanRemoval = true)
 	@JoinColumn(name = "idDivision")
 	@JsonIgnore
-	private final List<Carrera> carreras = new ArrayList<>();
+	private final Set<Carrera> carreras = new HashSet<>();
 	
 	public boolean addCarrera(Carrera carrera) {
 

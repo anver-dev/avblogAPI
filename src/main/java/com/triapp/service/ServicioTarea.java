@@ -1,4 +1,4 @@
-package com.triapp.services;
+package com.triapp.service;
 
 public class ServicioTarea {
 

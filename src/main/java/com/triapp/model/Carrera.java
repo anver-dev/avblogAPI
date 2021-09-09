@@ -1,7 +1,7 @@
 package com.triapp.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -23,11 +23,13 @@ public class Carrera {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long idCarrera;
 	private String nombre;
+	private int totalCreditos;
+	private int totalTrimestres;
 
 	@OneToMany(targetEntity = Materia.class, fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, orphanRemoval = true)
 	@JoinColumn(name = "idCarrera")
 	@JsonIgnore
-	private final List<Materia> materias = new ArrayList<>();
+	private final Set<Materia> materias = new HashSet<>();
 
 	public boolean addMateria(Materia materia) {
 
